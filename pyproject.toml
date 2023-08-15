@@ -1,0 +1,34 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "backup-pro"
+version = "1.0.0"
+authors = [{ name = "Halit Simsek", email = "mail.simsekhalit@gmail.com" }]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: System :: Archiving :: Backup"
+]
+dependencies = ["attrs ~= 23.1", "cattrs ~= 23.1"]
+description = "A comprehensive backup tool that makes the life easier when backing up/restoring configurations, files, packages of the system."
+keywords = ["apt", "archive", "backup", "backup-pro", "cli", "configuration", "diff", "flatpak", "gsettings", "package",
+    "pro", "recovery", "restore", "scan", "snap"]
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+ujson = ["ujson ~= 5.8; implementation_name == 'cpython'"]
+
+[project.urls]
+"Homepage" = "https://github.com/simsekhalit/backup-pro"
