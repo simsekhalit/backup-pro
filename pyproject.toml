@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "backup-pro"
-version = "1.0.0"
+version = "1.0.1"
 authors = [{ name = "Halit Simsek", email = "mail.simsekhalit@gmail.com" }]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
