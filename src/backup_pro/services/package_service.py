@@ -208,9 +208,9 @@ class FlatpakPackageHandler(BasePackageHandler):
 
     def _get_install_commands(self, packages: list[TrackedPackage]) -> list[list[str]]:
         if self._is_interactive():
-            return [["flatpak", "install", "--sandbox", "false", *(p.name for p in packages)]]
+            return [["flatpak", "install", *(p.name for p in packages)]]
         else:
-            return [["flatpak", "install", "-y", "--noninteractive", "--sandbox", "false", *(p.name for p in packages)]]
+            return [["flatpak", "install", "-y", "--noninteractive", *(p.name for p in packages)]]
 
     def _get_installed_packages(self) -> set[str]:
         output = subprocess.check_output(["flatpak", "list", "--app", "--columns", "application"],
